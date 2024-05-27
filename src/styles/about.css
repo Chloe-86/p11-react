@@ -1,0 +1,39 @@
+.wrapper-dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1023px;
+  margin: 0 auto;
+  padding-top: 38px;
+  padding-bottom: 38px;
+}
+
+.dropdown .bar {
+    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  flex: 1 0 0;
+  align-self: stretch;
+  background-color: #ff6060;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.dropdown h2 {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.dropdown p {
+  padding: 20px;
+}
+
+.arrow {
+  width: 32px;
+  height: 32px;
+  transform: rotate(180deg); 
+  flex-shrink: 0;
+}

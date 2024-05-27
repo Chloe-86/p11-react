@@ -1,0 +1,12 @@
+.template{
+
+}
+.template img{
+    height: 415px;
+    width: 100%;
+    object-fit: cover;
+}
+.columns{
+    display: flex;
+    justify-content: space-between;
+}
