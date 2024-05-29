@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import StarRating from '../components/StarRating';
 import DropDown from "../components/DropDown";
 import "../styles/template.css";
+import '../styles/info.css'
 
 const Info = ({item, id}) => {
 
@@ -21,13 +22,22 @@ const Info = ({item, id}) => {
           setVisibleDropdowns([...visibleDropdowns, id]);
         }
       };
+      
+      let location;
+
+      if(item.location.includes('-')){
+        let splitLocation = item.location.split('-');
+        let newLocation = splitLocation.reverse();
+        newLocation.splice(1,0,', ');
+        location = newLocation.join('');
+      }
 
   return (
     <>
       <div className="columns top">
         <div className="left-part">
           <h2 className="title red typo">{item.title}</h2>
-          <p>{item.location}</p>
+          <p>{location}</p>
           <ul>
             {item.tags.map((tag, index) => (
               <li className="bg-red-white tag center" key={index}>
@@ -44,7 +54,7 @@ const Info = ({item, id}) => {
             </div>
           </div>
 
-          <StarRating totalStars={5} rating={item.rating} />
+          <StarRating rating={item.rating} />
         </div>
       </div>
       <div className="columns space">

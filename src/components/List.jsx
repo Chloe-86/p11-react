@@ -10,12 +10,12 @@ const List = () => {
       <ul className="grid-container">
         {jsonData.map((item, index) => (
           <li className='grid-item' key={index}>
-            <div className="card">
+            <article className="card">
               <Link className="wrapper" to={`../pages/${item.id}`}>
                 <img src={item.cover} alt={item.title} />
                 <p>{item.title}</p>
               </Link>
-            </div>
+            </article>
           </li>
         ))}
       </ul>

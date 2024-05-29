@@ -1,8 +1,11 @@
+.stars{
 
-.star-rating .on .star {
-  color: #FF6060;
+  text-align: end;
+  padding-top: 21px;
 }
-
-.star-rating .off .star {
-  color: #E3E3E3;
+@media screen and (max-width: 768px){
+  .stars span img{
+    width: 13px !important;
+    height: 13px !important;
+  } 
 }

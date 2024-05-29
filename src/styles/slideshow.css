@@ -34,3 +34,8 @@
   font-weight: 500;
   line-height: 142.6%;
 }
+@media screen and (max-width: 768px){
+  .template img.cover {
+    height: 255px!important;
+  }
+}

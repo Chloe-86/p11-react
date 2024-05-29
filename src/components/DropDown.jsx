@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/dropdown.css";
 import arrow from "../assets/img/arrow.svg";
 
-const Dropdown = ({ title, content, isVisible, onToggle, customClassName }) => {
+const Dropdown = ({ title, content, isVisible, onToggle, customClassName}) => {
   return (
     <div className="dropdown">
       <div className={`dropdown-bar bar`} onClick={onToggle}>
@@ -10,7 +10,7 @@ const Dropdown = ({ title, content, isVisible, onToggle, customClassName }) => {
         <img src={arrow} alt="flèche" className={isVisible ? "arrow" : "arrow-active"} />
       </div>
       {isVisible && (
-        <div className="description">{content}</div>
+        <div className={`description ${isVisible ? "active" : "none"}`}>{content}</div>
       )}
     </div>
   );
