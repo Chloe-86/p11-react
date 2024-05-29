@@ -1,0 +1,8 @@
+
+.star-rating .on .star {
+  color: #FF6060;
+}
+
+.star-rating .off .star {
+  color: #E3E3E3;
+}

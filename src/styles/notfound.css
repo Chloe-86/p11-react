@@ -1,3 +1,4 @@
+
 .error {
   color: #ff6060;
   display: flex;
@@ -14,12 +15,11 @@
   font-weight: 700;
   /* margin-top: 139px; */
 }
-
-.error p {
+.error p{
   font-size: 36px;
   font-style: normal;
   font-weight: 500;
-  line-height: 142.6%;
+  line-height: 142.6%;  
 }
 
 .homeReturn {

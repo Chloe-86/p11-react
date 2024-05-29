@@ -1,5 +1,5 @@
 import React from 'react';
-import notfound from "../styles/notfound.css"
+import "../styles/notfound.css"
 import { NavLink } from 'react-router-dom';
 
 

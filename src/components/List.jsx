@@ -1,22 +1,22 @@
 import React from 'react';
 import jsonData from '../data/data.json';
 import { Link } from 'react-router-dom'; 
-import list from '../styles/list.css'
-import home from '../styles/banner.css'
+import '../styles/list.css'
+import '../styles/banner.css'
 
 const List = () => {
   return (
     <div>
       <ul className="grid-container">
         {jsonData.map((item, index) => (
-        <card >
           <li className='grid-item' key={index}>
-            <Link className="wrapper" to={`../pages/${item.id}`}>
-              <img src={item.cover} alt={item.title} />
-              <p>{item.title}</p>
-            </Link>
+            <div className="card">
+              <Link className="wrapper" to={`../pages/${item.id}`}>
+                <img src={item.cover} alt={item.title} />
+                <p>{item.title}</p>
+              </Link>
+            </div>
           </li>
-          </card>
         ))}
       </ul>
     </div>
@@ -24,3 +24,4 @@ const List = () => {
 }
 
 export default List;
+

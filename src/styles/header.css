@@ -1,6 +1,11 @@
 header {
     padding-top: 40px;
     justify-content: space-between;
+    max-width: 1240px;
+    margin: 45px auto 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    align-items: center;
   }
   
   header,
@@ -29,8 +34,9 @@ header {
  
   
   @media screen and (max-width:992px) {
-    .cover{
-        height: 111px;
+    header{
+      padding:20px ;
+    
     }
     .description{
        font-size:32px;
@@ -41,13 +47,19 @@ header {
   }
 
   @media screen and (max-width:768px) {
-    .cover{
-        height: 111px;
-    }
+   
     .description{
        font-size:24px!important;
     }
     .logo{
         height: 46px;
     }
+    nav ul li{
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    nav ul {
+      gap: 26px;
+    }
+    
   }

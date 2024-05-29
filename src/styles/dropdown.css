@@ -1,3 +1,6 @@
+.dropdown{
+  flex-direction: column;
+}
 .wrapper-dropdown {
   display: flex;
   flex-direction: column;
@@ -5,11 +8,19 @@
   max-width: 1023px;
   margin: 0 auto;
   padding-top: 38px;
+  padding-left: 108px;
+  padding-right: 108px;
   padding-bottom: 38px;
+}
+.dropdown-bar{
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 10px 15px;
+  background-color: #ff6060;
 }
 
 .dropdown .bar {
-    cursor: pointer;
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   flex: 1 0 0;
@@ -36,4 +47,13 @@
   height: 32px;
   transform: rotate(180deg); 
   flex-shrink: 0;
+}
+.dropdown .description{
+  padding: 20px 20px 20px 16px;
+}
+@media screen and (max-width: 768px){
+  .wrapper-dropdown{
+    padding-left: unset;
+    padding-right: unset;
+  }
 }

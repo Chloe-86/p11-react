@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink} from "react-router-dom";
 import bigLogo from "../assets/img/bigLogo.svg";
 import "../styles/header.css";
@@ -6,7 +6,6 @@ import "../styles/header.css";
 const Header = () => {
 
   return (
-    <div>
       <header>
         <h1>
           <img className="logo" src={bigLogo} alt="logo" />
@@ -14,15 +13,14 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <NavLink to="/" activeClassName="active" >Accueil</NavLink>
+              <NavLink to="/"  >Accueil</NavLink>
             </li>
             <li>
-              <NavLink to="/about" activeClassName="active">A propos</NavLink>
+              <NavLink to="/about" >A propos</NavLink>
             </li>
           </ul>
         </nav>
       </header>
-    </div>
   );
 };
 

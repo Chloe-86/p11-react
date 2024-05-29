@@ -1,18 +1,19 @@
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import RouterComponent from './components/Router';
-import main from './styles/main.css'
+import RouterComponent from './router/Router';
+import './app.css'
+import './styles/main.css'
 
 const App = () => {
   return (
-    <div>
-      <main>
+    <>
       <Header />
+      <main>
       <RouterComponent />
-      <Footer />
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }
 
