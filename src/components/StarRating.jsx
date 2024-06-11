@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import '../styles/starRating.css';
 import starFill from "../assets/img/starFill.svg";
 import starEmpty from "../assets/img/starEmpty.svg";

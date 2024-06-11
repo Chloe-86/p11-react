@@ -1,16 +1,14 @@
-import React from "react";
-import "../styles/banner.css"
-import { useLocation } from "react-router-dom";
 
-const Banner = () => {
-    const location = useLocation();
+import "../styles/banner.css"
+
+
+const Banner = ({classBanner, titleClass, title}) => {
+
   return (
     <div className="banner">
-       <div className={location.pathname === "/about" ? "cover-about" : "cover"}>
-        {location.pathname !== "/about" && (
-          <h2 className="description">Chez vous partout et ailleurs</h2>
-        )}
-      </div>
+    <div className={classBanner}>
+    <h2 className={titleClass}>{title}</h2>
+    </div>
     </div>
   );
 };

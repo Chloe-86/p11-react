@@ -1,43 +1,17 @@
-import React, { useState } from "react";
 import StarRating from '../components/StarRating';
 import DropDown from "../components/DropDown";
 import "../styles/template.css";
 import '../styles/info.css'
+import { Title } from "./Title";
 
-const Info = ({item, id}) => {
-
-    const [visibleDropdowns, setVisibleDropdowns] = useState([]);
-
-    // Trouver l'élément correspondant dans le tableau de données en fonction de l'ID
-
-  
-    if (!item) {
-      return <div>L'élément avec l'ID {id} n'existe pas.</div>;
-    }
-
-    const toggleVisibilite = (id) => {
-        if (visibleDropdowns.includes(id)) {
-          setVisibleDropdowns(visibleDropdowns.filter((item) => item !== id));
-        } else {
-          setVisibleDropdowns([...visibleDropdowns, id]);
-        }
-      };
-      
-      let location;
-
-      if(item.location.includes('-')){
-        let splitLocation = item.location.split('-');
-        let newLocation = splitLocation.reverse();
-        newLocation.splice(1,0,', ');
-        location = newLocation.join('');
-      }
+const Info = ({item}) => {
 
   return (
     <>
       <div className="columns top">
         <div className="left-part">
-          <h2 className="title red typo">{item.title}</h2>
-          <p>{location}</p>
+          <h2 className="title red typo"><Title item={item} naming={item.title} /></h2>
+          <p><Title item={item} naming={item.location} /></p>
           <ul>
             {item.tags.map((tag, index) => (
               <li className="bg-red-white tag center" key={index}>
@@ -62,8 +36,6 @@ const Info = ({item, id}) => {
           <DropDown
             title="Description"
             content={item.description}
-            isVisible={visibleDropdowns.includes("Description")}
-            onToggle={() => toggleVisibilite("Description")}
             customClassName="title-bar"
           />
         </div>
@@ -77,8 +49,6 @@ const Info = ({item, id}) => {
                 ))}
               </ul>
             }
-            isVisible={visibleDropdowns.includes("equipements")}
-            onToggle={() => toggleVisibilite("equipements")}
             customClassName="title-bar"
           />
         </div>

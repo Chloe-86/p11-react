@@ -1,28 +1,46 @@
-import React from "react";
+
 import "../styles/dropdown.css";
 import arrow from "../assets/img/arrow.svg";
+import { useState } from "react";
 
-const Dropdown = ({ title, content, isVisible, onToggle, customClassName}) => {
+const DropDown = ({ title, content, customClassName}) => {
 
-
+  const [isOpen, setIsOpen] = useState(false);
   
+  
+  const onToggle = () => {
+    setIsOpen((prevIsOpen) => !prevIsOpen);
+  };
+
   return (
-    <div className="dropdown">
-      <div className={`dropdown-bar bar`} onClick={onToggle}>
+    <div className="dropdown" aria-label={title}>
+      <div
+        className={`dropdown-bar bar`}
+        onClick={onToggle}
+        role="button"
+        aria-expanded={isOpen}
+      >
         <h2 className={`title ${customClassName}`}>{title}</h2>
-        <img src={arrow} alt="flèche" className={isVisible ? "arrow" : "arrow-active"} />
+        <img
+          src={arrow}
+          alt="Flèche"
+          className={isOpen ? "arrow-active" : "arrow"}
+        />
       </div>
-      {isVisible && (
-        <div className={`description ${isVisible ? "active" : "none"}`}>{content}</div>
+      {isOpen && (
+        <div
+          className={`description ${isOpen ? "active" : "none"}`}
+          aria-hidden={!isOpen}
+        >
+          {content}
+        </div>
       )}
     </div>
   );
 };
 
-export default Dropdown;
+DropDown.defaultProps = {
+  customClassName: "",
+};
 
-
-
-
-
-
+export default DropDown;

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { NavLink} from "react-router-dom";
 import bigLogo from "../assets/img/bigLogo.svg";
 import "../styles/header.css";
@@ -13,7 +13,7 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <NavLink to="/"  >Accueil</NavLink>
+              <NavLink to="/">Accueil</NavLink>
             </li>
             <li>
               <NavLink to="/about" >A propos</NavLink>

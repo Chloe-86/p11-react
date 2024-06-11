@@ -1,5 +1,5 @@
-import React from 'react';
-// // import des images
+
+
 import arrowRight from "../assets/img/arrow-right.svg";
 import arrowLeft from "../assets/img/arrow-left.svg";
 import { useState } from 'react';
@@ -9,12 +9,12 @@ const SlideShow = ({item}) =>{
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Fonction pour gérer le clic sur la flèche droite
+  
   const handleNextClick = () => {
     setCurrentIndex((index) => (index - 1 + item.pictures.length) % item.pictures.length);
   };
 
-  // Fonction pour gérer le clic sur la flèche gauche
+
   const handleBeforeClick = () => {
     setCurrentIndex((index) => (index + 1) % item.pictures.length);
   };
