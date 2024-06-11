@@ -3,6 +3,9 @@ import "../styles/dropdown.css";
 import arrow from "../assets/img/arrow.svg";
 
 const Dropdown = ({ title, content, isVisible, onToggle, customClassName}) => {
+
+
+  
   return (
     <div className="dropdown">
       <div className={`dropdown-bar bar`} onClick={onToggle}>

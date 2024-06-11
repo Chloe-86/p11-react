@@ -1,11 +1,18 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom'; 
-import Home from '../components/Home';
-import About from '../components/About';
-import Template from '../pages/Template';
+import Home from '../pages/Home.jsx';
+import About from '../pages/About.jsx';
+import Template from '../template/Template.jsx';
 import NotFound from '../components/NotFound';
+import {useJsonDataContext} from "../jsonDataContext.jsx"
 
 const Router = () => {
+  const { jsonData } = useJsonDataContext();
+
+  // Si les données ne sont pas encore disponibles, affichez un message de chargement
+  if (!jsonData) {
+    return <div aria-live="polite">Loading...</div>;
+  }
   return (
     <div>
       <Routes>

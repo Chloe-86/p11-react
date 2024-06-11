@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Banner from "./Banner";
-import DropDown from "./DropDown";
+import Banner from "../components/Banner";
+import DropDown from "../components/DropDown";
 
 
 const About = () => {
