@@ -28,12 +28,12 @@ const DropDown = ({ title, content, customClassName}) => {
         />
       </div>
       {isOpen && (
-        <div
+        <p
           className={`description ${isOpen ? "active" : "none"}`}
           aria-hidden={!isOpen}
         >
           {content}
-        </div>
+        </p>
       )}
     </div>
   );

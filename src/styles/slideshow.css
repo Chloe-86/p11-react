@@ -37,5 +37,11 @@
 @media screen and (max-width: 768px){
   .template img.cover {
     height: 255px!important;
-  }
+   }
+   .template .arrow-right img,
+.template .arrow-left img {
+  object-fit: cover;
+  max-width: 24px;
+  max-height: 24px;
+}
 }

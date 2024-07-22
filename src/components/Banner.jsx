@@ -7,7 +7,7 @@ const Banner = ({classBanner, titleClass, title}) => {
   return (
     <div className="banner">
     <div className={classBanner}>
-    <h2 className={titleClass}>{title}</h2>
+    <div className={titleClass}>{title}</div>
     </div>
     </div>
   );

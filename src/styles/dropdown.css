@@ -52,6 +52,8 @@
 }
 .dropdown .description{
   padding: 20px 20px 20px 16px;
+  font-size: 18px;
+  line-height: 142.6%;
 }
 @media screen and (max-width: 768px){
   .wrapper-dropdown{
