@@ -5,11 +5,11 @@ import "../styles/banner.css"
 const Banner = ({classBanner, titleClass, title}) => {
 
   return (
-    <div className="banner">
+    <section className="banner">
     <div className={classBanner}>
-    <div className={titleClass}>{title}</div>
+    <h2 className={titleClass}>{title}</h2>
     </div>
-    </div>
+    </section>
   );
 };
 

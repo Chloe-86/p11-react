@@ -8,7 +8,7 @@ export const Card = ({item}) => {
     <article className="card">
       <Link className="wrapper" to={`../pages/${item.id}`}>
         <img src={item.cover} alt={item.title} />
-        <p><Title item={item} naming={item.title} /></p>
+        <h3><Title item={item} naming={item.title} /></h3>
       </Link>
     </article>
   );
