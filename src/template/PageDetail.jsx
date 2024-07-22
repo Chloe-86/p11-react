@@ -1,7 +1,6 @@
 
 import Info from "../components/Info.jsx";
-import { useParams } from "react-router-dom";
-// import jsonData from "../data/data.json";
+import { useParams, Navigate } from "react-router-dom";
 import SlideShow from "../components/SlideShow.jsx"
 import { useJsonDataContext } from "../api/jsonDataContext.jsx";
 
@@ -13,6 +12,11 @@ const PageDetail = () => {
   // Si les données ne sont pas encore disponibles, affichez un message de chargement
   if (!jsonData) {
     return <div aria-live="polite">Loading...</div>;
+  }
+  const page = jsonData.find(page => page.id === id);
+
+  if (!page) {
+    return <Navigate to="*" />;
   }
 
   // Trouver l'élément correspondant dans le tableau de données en fonction de l'ID

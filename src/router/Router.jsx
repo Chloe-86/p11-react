@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from '../pages/Home.jsx';
 import About from '../pages/About.jsx';
 import PageDetail from '../template/PageDetail.jsx';
-import NotFound from '../components/NotFound';
+import NotFound from '../pages/NotFound.jsx';
 import { useJsonDataContext } from "../api/jsonDataContext.jsx";
 
 const Router = () => {

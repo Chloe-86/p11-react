@@ -3,7 +3,7 @@ import "../styles/dropdown.css";
 import arrow from "../assets/img/arrow.svg";
 import { useState } from "react";
 
-const DropDown = ({ title, content, customClassName}) => {
+const DropDown = ({ title, content, customClassName = ""}) => {
 
   const [isOpen, setIsOpen] = useState(false);
   
@@ -39,8 +39,6 @@ const DropDown = ({ title, content, customClassName}) => {
   );
 };
 
-DropDown.defaultProps = {
-  customClassName: "",
-};
+
 
 export default DropDown;
