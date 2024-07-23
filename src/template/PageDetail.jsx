@@ -13,19 +13,16 @@ const PageDetail = () => {
   if (!jsonData) {
     return <div aria-live="polite">Loading...</div>;
   }
+    // Trouver l'élément correspondant dans le tableau de données en fonction de l'ID
   const page = jsonData.find(page => page.id === id);
 
   if (!page) {
     return <Navigate to="*" />;
   }
-
-  // Trouver l'élément correspondant dans le tableau de données en fonction de l'ID
-  const item = jsonData.find((item) => item.id === id);
-
   return (
     <div className="template">
-      <SlideShow item={item} />
-      <Info item={item} />
+      <SlideShow item={page} />
+      <Info item={page} />
     </div>
   );
 };
