@@ -5,10 +5,10 @@
   transform: translateY(-50%);
   cursor: pointer;
 }
-.template .arrow-left {
+.template .arrow-right {
   right: 23px;
 }
-.template .arrow-right {
+.template .arrow-left{
   left: 23px;
 }
 .template img.cover {
