@@ -24,7 +24,7 @@ const Info = ({ item }) => {
           </ul>
         </div>
         <div className="right-part">
-          <div className="columns">
+          <div className="columns plus-center">
             <h2 className="name plus"><div>{item.host.name.split(' ')[0]}</div><div>{item.host.name.split(' ')[1]}</div></h2>
             <div className="cercle-profil">
               <img src={item.host.picture} alt={item.title} />
