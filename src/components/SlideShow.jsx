@@ -6,11 +6,11 @@ import "../styles/slideshow.css";
 const SlideShow = ({ item }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleNextClick = () => {
+  const handleBeforeClick = () => {
     setCurrentIndex((index) => (index - 1 + item.pictures.length) % item.pictures.length);
   };
 
-  const handleBeforeClick = () => {
+  const  handleNextClick = () => {
     setCurrentIndex((index) => (index + 1) % item.pictures.length);
   };
 
@@ -29,10 +29,10 @@ const SlideShow = ({ item }) => {
   return (
     <div className="ref">
       <img className="cover" src={item.pictures[currentIndex]} alt={item.title} />
-      <div className="arrow-right" onClick={handleNextClick}>
+      <div className="arrow-right" onClick={handleBeforeClick}>
         <img src={arrowLeft} alt="fleche" />
       </div>
-      <div className="arrow-left" onClick={handleBeforeClick}>
+      <div className="arrow-left" onClick={handleNextClick}>
         <img src={arrowRight} alt="fleche" />
       </div>
       <div className="index">

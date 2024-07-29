@@ -1,14 +1,15 @@
 import React from "react";
-import { Link } from 'react-router-dom'; 
+import { Link } from "react-router-dom";
 import { Title } from "./Title";
 
-
-export const Card = ({item}) => {
+export const Card = ({ item }) => {
   return (
     <article className="card">
       <Link className="wrapper" to={`../pages/${item.id}`}>
         <img src={item.cover} alt={item.title} />
-        <h3><Title item={item} naming={item.title} /></h3>
+        <h3>
+          <Title item={item} naming={item.title} />
+        </h3>
       </Link>
     </article>
   );

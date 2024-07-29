@@ -1,14 +1,13 @@
-
-import logo from '../assets/img/logo.svg'
-import '../styles/footer.css'
+import logo from "../assets/img/logo.svg";
+import "../styles/footer.css";
 
 const Footer = () => {
   return (
-      <footer>
+    <footer>
       <img src={logo} alt="logo" />
       <p>© 2020. All rights reserved</p>
-      </footer>
+    </footer>
   );
-}
+};
 
 export default Footer;

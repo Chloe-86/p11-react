@@ -4,7 +4,6 @@ import Banner from "../components/Banner";
 
 
 const Home = () => {
-  
   return (
     <>
       <Banner classBanner={"cover"} titleClass={"description"} title={"Chez vous partout et ailleurs"} />

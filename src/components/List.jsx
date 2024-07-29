@@ -12,7 +12,9 @@ const List = () => {
   return (
     <>
       <section>
-        <h2 className="hidden-for-visual" aria-hidden="true">Liste</h2>
+        <h2 className="hidden-for-visual" aria-hidden="true">
+          Liste
+        </h2>
         <ul className="grid-container">
           {jsonData.map((item, index) => (
             <li className="grid-item" key={index}>
