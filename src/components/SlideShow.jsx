@@ -3,6 +3,11 @@ import arrowLeft from "../assets/img/arrow-left.svg";
 import { useState } from "react";
 import "../styles/slideshow.css";
 
+// + item.pictures.length : On ajoute item.pictures.length (le nombre total d'images dans item.pictures)
+//  pour éviter les valeurs négatives lorsque index est 0. Cela garantit que l'index résultant reste positif ou nul.
+// % item.pictures.length : L'opérateur modulo (%) est utilisé pour faire en sorte que l'index reste dans les limites valides 
+// (entre 0 et item.pictures.length - 1). Cela crée un effet de "bouclage" où, si l'index devient négatif, il revient à la fin de la liste des images.
+
 const SlideShow = ({ item }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -30,10 +35,10 @@ const SlideShow = ({ item }) => {
     <div className="ref">
       <img className="cover" src={item.pictures[currentIndex]} alt={item.title} />
       <div className="arrow-right" onClick={handleBeforeClick}>
-        <img src={arrowLeft} alt="fleche" />
+        <img src={arrowRight} alt="fleche" />
       </div>
       <div className="arrow-left" onClick={handleNextClick}>
-        <img src={arrowRight} alt="fleche" />
+        <img src={arrowLeft} alt="fleche" />
       </div>
       <div className="index">
         {currentIndex + 1}/{item.pictures.length}
